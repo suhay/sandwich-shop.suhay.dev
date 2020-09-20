@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 165 15" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:guide x="82.775" y="-6.42" angle="0"/>
+    <bx:guide x="31.014" y="17.538" angle="90"/>
+    <bx:guide x="41.757" y="15.282" angle="90"/>
+    <bx:guide x="91.879" y="21.485" angle="90"/>
+    <bx:guide x="1.799" y="1.479" angle="0"/>
+    <filter id="chalk" height="2" width="1.6" color-interpolation-filters="sRGB" y="-0.5" x="-0.3" bx:pinned="true">
+      <title>chalk</title>
+      <feTurbulence baseFrequency="50" seed="115" result="result1" numOctaves="1" type="turbulence"/>
+      <feOffset result="result2" dx="-5" dy="-5" in="result1"/>
+      <feDisplacementMap scale="1.5" yChannelSelector="G" in2="result1" xChannelSelector="R" in="SourceGraphic" result="displacement-map-0"/>
+      <feGaussianBlur stdDeviation="0.1" in="displacement-map-0" result="gaussian-blur-0"/>
+    </filter>
+  </defs>
+  <g style="filter: url(#chalk);" transform="matrix(1, 0, 0, 1, -1, -11)">
+    <path d="M 679 343.282 L 680.109 346.473 L 683.487 346.542 L 680.795 348.583 L 681.773 351.817 L 679 349.887 L 676.227 351.817 L 677.205 348.583 L 674.513 346.542 L 677.891 346.473 Z" style="fill: none; stroke: rgb(255, 255, 255);" transform="matrix(1, 0.000037, -0.000037, 1, -596.742492, -330.3573)" bx:shape="star 679 348 4.718 4.718 0.4 5 1@69a166c1"/>
+    <path style="fill: none; stroke: rgb(255, 255, 255);" d="M 7.117 18.538 L 1.799 16.282 L 64.582 16.36 L 70.985 21.04 L 1.799 21.04 L 7.117 18.538 Z"/>
+    <path style="fill: none; stroke: rgb(255, 255, 255);" d="M 100.117 18.784 L 94.799 21.04 L 157.582 20.962 L 163.985 16.282 L 94.799 16.282 L 100.117 18.784 Z" transform="matrix(-1, 0, 0, -1, 258.784004, 37.322001)"/>
+  </g>
+</svg>

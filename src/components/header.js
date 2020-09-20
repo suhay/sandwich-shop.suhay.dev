@@ -1,42 +1,33 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react'
+import styled from 'styled-components'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+import logo from '../../assets/img/sandwich-shop.svg'
+
+const Container = styled.header`
+  padding-bottom: 8px;
+  background-color: #111111;
+  position: relative;
+`
+
+const Logo = styled.img`
+  position: absolute;
+  width: 500px;
+`
+
+const Header = ({ siteTitle }) => {
+  return (
+    <Container
+      className="d-xl-flex justify-content-xl-center align-items-xl-center"
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+      <div className="embed-responsive embed-responsive-16by9 video">
+        <video loop muted autoPlay poster="shutterstock_1131563363" className="fullscreen-bg__video">
+          <source src="https://sandwich-shop.suhay.dev/video/27100114-sd.webm" type="video/webm" />
+          <source src="https://sandwich-shop.suhay.dev/video/27100114-sd.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <Logo className="color-logo" src={logo} alt={siteTitle} />
+    </Container>
+  )
 }
 
 export default Header

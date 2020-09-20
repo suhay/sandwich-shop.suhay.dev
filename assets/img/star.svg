@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <filter id="chalk" height="2" width="1.6" color-interpolation-filters="sRGB" y="-0.5" x="-0.3">
+      <title>chalk</title>
+      <feTurbulence baseFrequency="50" seed="115" result="result1" numOctaves="1" type="turbulence"/>
+      <feOffset result="result2" dx="-5" dy="-5" in="result1"/>
+      <feDisplacementMap scale="1.5" yChannelSelector="G" in2="result1" xChannelSelector="R" in="SourceGraphic" result="displacement-map-0"/>
+      <feGaussianBlur stdDeviation="0.1" in="displacement-map-0" result="gaussian-blur-0"/>
+    </filter>
+    <radialGradient gradientUnits="userSpaceOnUse" cx="678.867" cy="349.353" r="4.487" id="gradient-0">
+      <stop offset="0" style="stop-color: rgb(255, 255, 255);"/>
+      <stop offset="1" style="stop-color: rgb(255, 255, 255);"/>
+    </radialGradient>
+  </defs>
+  <path d="M 679 343.282 L 680.109 346.473 L 683.487 346.542 L 680.795 348.583 L 681.773 351.817 L 679 349.887 L 676.227 351.817 L 677.205 348.583 L 674.513 346.542 L 677.891 346.473 Z" style="stroke: rgb(255, 255, 255); filter: url(#chalk); fill: url(#gradient-0); fill-opacity: 0;" transform="matrix(1, 0.000037, -0.000037, 1, -671.904113, -340.843841)" bx:shape="star 679 348 4.718 4.718 0.4 5 1@69a166c1"/>
+</svg>

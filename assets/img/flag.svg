@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 380 132" style="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <pattern id="pattern-1" viewBox="0 0 60 60" patternUnits="userSpaceOnUse" preserveAspectRatio="none" width="100" height="100" bx:pinned="true">
+      <title>pattern</title>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 0 20 L 20 0"/>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 0 40 L 40 0"/>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 0 60 L 60 0"/>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 20 60 L 60 20"/>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 40 60 L 60 40"/>
+    </pattern>
+    <pattern id="pattern-1-1" patternTransform="matrix(0.346871, 0, 0, 0.401755, 187.789505, -33.802486)" xlink:href="#pattern-1"/>
+    <filter id="chalk" height="2" width="1.6" color-interpolation-filters="sRGB" y="-0.5" x="-0.3">
+      <title>chalk</title>
+      <feTurbulence baseFrequency="50" seed="115" result="result1" numOctaves="1" type="turbulence"/>
+      <feOffset result="result2" dx="-5" dy="-5" in="result1"/>
+      <feDisplacementMap scale="1.5" yChannelSelector="G" in2="result1" xChannelSelector="R" in="SourceGraphic" result="displacement-map-0"/>
+      <feGaussianBlur stdDeviation="0.1" in="displacement-map-0" result="gaussian-blur-0"/>
+    </filter>
+    <pattern id="pattern-0" viewBox="0 0 60 60" patternUnits="userSpaceOnUse" preserveAspectRatio="none" width="100" height="100" bx:pinned="true">
+      <title>r-pattern</title>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 0 40 L 20 60"/>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 0 20 L 40 60"/>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 0 0 L 60 60"/>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 20 0 L 60 40"/>
+      <path style="fill: rgb(216, 216, 216); stroke: rgb(255, 255, 255); stroke-width: 3px;" d="M 40 0 L 60 20"/>
+    </pattern>
+    <pattern id="pattern-0-0" patternTransform="matrix(1, 0, 0, 1, 81.743696, 26.794579)" xlink:href="#pattern-0"/>
+  </defs>
+  <path style="fill: url(#pattern-1-1); stroke: rgb(255, 255, 255); stroke-width: 3px; stroke-linejoin: bevel; filter: url(#chalk);" d="M 222.579 6.202 L 253 26.193 L 222.579 26.193 L 222.579 6.202 Z"/>
+  <path style="stroke: rgb(255, 255, 255); stroke-width: 3px; stroke-linejoin: round; filter: url(#chalk); fill-opacity: 0.43; fill: none;" d="M 222.579 26.193 L 223.094 6.202 L 372.058 7.007 L 322.058 57.007 L 372.058 107.007 L 253 106.513 L 253 26.193 L 222.579 26.193 Z M 3 76.193 C 4.546 75.034 56.105 23.864 53 26.193 C 77.468 25.494 269.946 25.709 253 26.193 L 253 126.193 L 53 126.193 L 3 76.193 Z"/>
+  <path style="stroke: rgb(255, 255, 255); stroke-linejoin: round; filter: url(#chalk); fill-opacity: 0.5; fill: url(#pattern-0-0);" d="M 20.441 76.985 C 21.812 75.997 67.528 32.344 64.775 34.331 C 86.47 33.734 257.137 33.918 242.111 34.331 L 242.111 119.64 L 64.775 119.64 L 20.441 76.985 Z"/>
+</svg>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <bx:guide x="300" y="0" angle="0"/>
+    <bx:guide x="150" y="0" angle="0"/>
+    <bx:guide x="0" y="150" angle="90"/>
+    <bx:guide x="0" y="300" angle="90"/>
+    <bx:guide x="28.252" y="85.176" angle="0"/>
+    <bx:guide x="437.842" y="28.527" angle="90"/>
+    <bx:guide x="395.082" y="423.124" angle="90"/>
+    <bx:guide x="422.896" y="333.866" angle="0"/>
+    <filter id="chalk" height="2" width="1.6" color-interpolation-filters="sRGB" y="-0.5" x="-0.3">
+      <title>chalk</title>
+      <feTurbulence baseFrequency="50" seed="115" result="result1" numOctaves="1" type="turbulence"/>
+      <feOffset result="result2" dx="0" dy="0" in="result1"/>
+      <feDisplacementMap scale="3" yChannelSelector="G" in2="result1" xChannelSelector="R" in="SourceGraphic" result="displacement-map-0"/>
+      <feGaussianBlur stdDeviation="0.1" in="displacement-map-0" result="gaussian-blur-0"/>
+    </filter>
+  </defs>
+  <path style="fill: none; stroke: rgb(255, 255, 255); filter: url(#chalk); stroke-width: 5px;" d="M 300 420.027 L 150 420 L 50 420 C 50 410 40 400 30 400 L 30 300 L 30 152.49 L 30 50 C 40 50 50 40 50 30 L 150 30 L 300 30.045 L 400 30 C 400 40 410 50 420 50 L 420 152.49 L 420 300 L 420 400 C 410 400 400 410 400 420 L 300 420.027 Z"/>
+  <path style="fill: none; stroke: rgb(255, 255, 255); stroke-dasharray: 10; stroke-width: 4px;" d="M 294.991 407.027 L 155.009 407.002 L 61.689 407.002 C 61.689 397.67 52.356 388.338 43.024 388.338 L 43.024 295.017 L 43.024 157.359 L 43.024 61.715 C 52.356 61.715 61.689 52.383 61.689 43.051 L 155.009 43.051 L 294.991 43.093 L 388.311 43.051 C 388.311 52.383 397.644 61.715 406.976 61.715 L 406.976 157.359 L 406.976 295.017 L 406.976 388.338 C 397.644 388.338 388.311 397.67 388.311 407.002 L 294.991 407.027 Z"/>
+</svg>
