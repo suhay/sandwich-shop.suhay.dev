@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <defs>
-    <bx:guide x="300" y="0" angle="0"/>
-    <bx:guide x="150" y="0" angle="0"/>
-    <bx:guide x="0" y="150" angle="90"/>
-    <bx:guide x="0" y="300" angle="90"/>
-    <bx:guide x="28.252" y="85.176" angle="0"/>
-    <bx:guide x="437.842" y="28.527" angle="90"/>
-    <bx:guide x="395.082" y="423.124" angle="90"/>
-    <bx:guide x="422.896" y="333.866" angle="0"/>
     <filter id="chalk" height="2" width="1.6" color-interpolation-filters="sRGB" y="-0.5" x="-0.3">
       <title>chalk</title>
       <feTurbulence baseFrequency="50" seed="115" result="result1" numOctaves="1" type="turbulence"/>

@@ -10,9 +10,10 @@ const Price = styled.span`
 const Logo = styled.img`
   width: 129px;
   opacity: 0.62;
-  left: 264px;
+  left: 20%;
   position: relative;
   transform: rotate(-17deg);
+  padding-bottom: 30px;
 `
 
 const Gowich = () => (

@@ -8,6 +8,7 @@ import SEO from '../components/seo'
 import About from '../components/about'
 import Nodewich from '../components/nodewich'
 import Gowich from '../components/gowich'
+import Configuration from '../components/configure'
 
 import Star from '../components/fragments/star'
 import Tomato from '../components/fragments/tomato'
@@ -20,7 +21,7 @@ import stroke2 from '../../assets/img/stroke-2.svg'
 
 const Main = styled.main`
   padding-top: 10px;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #111111;
   color: rgb(255, 255, 255);
   background-image: url(${blackBoard});
@@ -31,6 +32,7 @@ const Main = styled.main`
 `
 
 const Container = styled.div`
+  min-height: 90vh;
   height: 100%;
   border: 30px solid;
   border-image-source: url(${border});
@@ -62,7 +64,7 @@ const SandwichStroke = styled.img`
   opacity: 0.79;
 `
 
-const RightColumn = styled.div`
+const MenuSection = styled.div`
   border-top-style: solid;
   padding-top: 10px;
 `
@@ -87,8 +89,8 @@ const IndexPage = ({ data }) => {
               </RotateClockwise>
             </div>
           </div>
-          <div className="row">
-            <div className="col-5 d-flex justify-content-end">
+          <div className="row py-3">
+            <div className="col-5 d-lg-flex justify-content-end d-none">
               <Cheese width={35} rotate={20} left={25} bottom={44} />
               <Cheese width={24} rotate={128} left={174} top={11} />
               <Star width={35} rotate={57} left={101} bottom={19} />
@@ -97,10 +99,10 @@ const IndexPage = ({ data }) => {
               <Tomato width={35} rotate={20} left={100} top={30} />
               <img src={flag} alt="" />
             </div>
-            <div className="col-2 d-flex flex-column flex-shrink-1 justify-content-center align-items-center">
+            <div className="col-lg-2 col-12 d-flex flex-column flex-shrink-1 justify-content-center align-items-center">
               <Img className="logo" alt="Sandwich Shop" fixed={data.logo.childImageSharp.fixed} />
             </div>
-            <div className="col-5 d-flex">
+            <div className="col-5 d-lg-flex d-none">
               <img className="mirror" src={flag} alt="" />
               <Star width={47} rotate={26} right={101} top={19} />
               <Tomato width={51} rotate={73} right={60} top={121} />
@@ -109,7 +111,7 @@ const IndexPage = ({ data }) => {
               <Star width={23} rotate={22} right={145} bottom={15} />
             </div>
           </div>
-          <RightColumn className="row">
+          <MenuSection className="row">
             <About />
             <div className="col">
               <div className="row">
@@ -123,9 +125,10 @@ const IndexPage = ({ data }) => {
               <Nodewich />
               <Gowich />
             </div>
-          </RightColumn>
+          </MenuSection>
         </Container>
       </Main>
+      <Configuration />
     </Layout>
   )
 }

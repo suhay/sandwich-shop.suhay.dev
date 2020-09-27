@@ -4,9 +4,11 @@ import styled from 'styled-components'
 import stroke from '../../assets/img/stroke-1.svg'
 
 const Container = styled.div`
-  max-width: 33%;
   border-right-width: 2px;
   border-right-style: dotted;
+  @media (max-width: 768px) {
+    border: 0;
+  }
 `
 
 const H2 = styled.h2`
@@ -24,7 +26,7 @@ const Stroke = styled.img`
 `
 
 const About = () => (
-  <Container className="col flex-column flex-wrap">
+  <Container className="col col-md-4 flex-column flex-wrap">
     <H2 className="display-4">
       About
     </H2>

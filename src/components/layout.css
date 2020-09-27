@@ -23,12 +23,6 @@ header {
   width: 200px;
 }
 
-.video {
-  background: radial-gradient(circle, transparent 30%, black 90%);
-  filter: blur(8px);
-  opacity: 0.5;
-}
-
 .mirror {
   transform: scale(-1,1);
 }

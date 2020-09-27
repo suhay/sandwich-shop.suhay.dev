@@ -7,6 +7,7 @@ const Container = styled.header`
   padding-bottom: 8px;
   background-color: #111111;
   position: relative;
+  height: 100vh;
 `
 
 const Logo = styled.img`
@@ -14,17 +15,27 @@ const Logo = styled.img`
   width: 500px;
 `
 
+const Video = styled.div`
+  background: radial-gradient(circle, transparent 30%, black 90%);
+  filter: blur(15px);
+  opacity: 0.1;
+  height: 100%;
+  & video {
+    object-fit: cover;
+  }
+`
+
 const Header = ({ siteTitle }) => {
   return (
     <Container
-      className="d-xl-flex justify-content-xl-center align-items-xl-center"
+      className="d-flex justify-content-center align-items-center"
     >
-      <div className="embed-responsive embed-responsive-16by9 video">
-        <video loop muted autoPlay poster="shutterstock_1131563363" className="fullscreen-bg__video">
-          <source src="https://sandwich-shop.suhay.dev/video/27100114-sd.webm" type="video/webm" />
-          <source src="https://sandwich-shop.suhay.dev/video/27100114-sd.mp4" type="video/mp4" />
+      <Video className="embed-responsive embed-responsive-16by9">
+        <video loop muted autoPlay className="fullscreen-bg__video">
+          <source src="https://suhay.dev/sandwich-shop/video/27100114-sd.webm" type="video/webm" />
+          <source src="https://suhay.dev/sandwich-shop/video/27100114-sd.mp4" type="video/mp4" />
         </video>
-      </div>
+      </Video>
       <Logo className="color-logo" src={logo} alt={siteTitle} />
     </Container>
   )
