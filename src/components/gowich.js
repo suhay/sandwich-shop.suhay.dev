@@ -30,8 +30,8 @@ const Gowich = () => (
       <div className="row">
         <div className="col d-flex flex-column">
           <p>
-            Pick this one when you want to be trendy and loved avocado toast before you could buy it
-            everywhere. Damn I love me some avocado toast...
+            Think of a Gowich like a piece of avocado toast with a handcrafted, toasted seed and onion sprinkle. Serve it up with a bit of argula or
+            whatever your API requirements are.
           </p>
           <Logo src={goLogo} />
         </div>

@@ -36,18 +36,23 @@ const request = `POST https://sandwiches.example.com/shop/sudo/makeSandwich
 const Configure = () => {
   return (
     <Container className="container">
-      Easy to configure, multi-tenant system.
-
-      <SyntaxHighlighter language="yaml" style={railscasts} showLineNumbers>
-        {orders}
-      </SyntaxHighlighter>
-
-      Write your functions in any language that you want (as long as it's Go or Node), upload your files to the tenant directory, and then call it!
-
-      <SyntaxHighlighter language="yaml" style={railscasts}>
-        {request}
-      </SyntaxHighlighter>
-      
+      <h2>
+        Why Sandwich Shop?
+      </h2>
+      <div className="row">
+        <div className="col col-md-6">
+          Easy to configure, multi-tenant system.
+          <SyntaxHighlighter language="yaml" style={railscasts} showLineNumbers>
+            {orders}
+          </SyntaxHighlighter>
+        </div>
+        <div className="col col-md-6">
+          Write your functions in any language that you want (as long as it's Go or Node), upload your files to the tenant directory, and then call it!
+          <SyntaxHighlighter language="yaml" style={railscasts}>
+            {request}
+          </SyntaxHighlighter>
+        </div>
+      </div>
     </Container>
   )
 }

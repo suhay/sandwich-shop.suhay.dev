@@ -29,9 +29,8 @@ const Nodewich = () => (
       <div className="row">
         <div className="col d-flex flex-column">
           <p>
-            Pretty standard affair. Make a node application, put it up on Sandwich Shop and hope that it just
-            works as expected. If it doesn't at first, don't bother trying to find API documentation because who
-            does that? Also, it would probably be hot garbage anyways.
+            The tried and true turkey on wheat, no routes or middleware needed, cold starts are a waste of time, just place my order so
+            I can get back to work, kind of -wich. Best served with a massive helping of mashed node_modules and a lodash of oregano.
           </p>
           <Logo className="align-self-end" src={nodeLogo} />
         </div>
