@@ -26,7 +26,7 @@ const Stroke = styled.img`
 `
 
 const About = () => (
-  <Container className="col col-md-4 flex-column flex-wrap">
+  <Container className="col col-md-7 flex-column flex-wrap">
     <H2 className="display-4">
       About
     </H2>
