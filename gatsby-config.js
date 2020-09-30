@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/sandwich-shop',
   siteMetadata: {
     title: 'Sandwich Shop',
     description: 'Containerless, Serverless experiment using Go and GraphQL',
