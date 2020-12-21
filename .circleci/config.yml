@@ -1,0 +1,59 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1.0
+
+jobs:
+  build:
+    docker:
+      - image: 'cimg/node:14.14.0'
+        auth:
+          username: suhay
+          password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
+    steps:
+      - checkout
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --immutable
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: Gatsby build
+          command: yarn build
+      - run:
+          name: Zip up site
+          command: tar -zcvf main.tar.gz public
+      - store_artifacts:
+          path: main.tar.gz
+      - persist_to_workspace:
+          root: ~/
+          paths:
+            - project/main.tar.gz
+
+  deploy:
+    machine:
+      image: ubuntu-2004:202010-01
+    steps:
+      - attach_workspace:
+          at: ~/
+      - run:
+          name: SCP artifact
+          command: |
+            scp ~/project/main.tar.gz ubuntu@suhay.dev:/mnt/projects/sandwich-shop.suhay.dev/${CIRCLE_SHA1}.tar.gz
+
+workflows:
+  build_and_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - build
